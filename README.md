@@ -1,0 +1,2 @@
+# IpssyDay
+conf ipssy
