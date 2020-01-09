@@ -4,6 +4,9 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 
+ @import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+ @import url('https://fonts.googleapis.com/css?family=Public+Sans&display=swap');
+
 body {
   overflow-x: hidden;
   font-family: 'Roboto Slab', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -19,6 +22,8 @@ a {
 
 a:hover {
   color: #2196F3;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
 }
 
 .text-primary {
@@ -40,7 +45,7 @@ h6 {
 }
 
 .text{
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 .page-section h2.section-heading {
@@ -102,9 +107,9 @@ img::-moz-selection {
 }
 
 .btn-primary:active, .btn-primary:focus, .btn-primary:hover {
-  background-color: #2196F3 !important;
-  border-color: #2196F3 !important;
-  color: white;
+  background-color: white !important;
+  border-color: #263874 !important;
+  color: #263874;
 }
 
 .btn-primary:active, .btn-primary:focus {
@@ -113,6 +118,18 @@ img::-moz-selection {
 
 #mainNav {
   background-color: #212529;
+}
+
+.scroll {
+  color: #ffff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-family: 'Montserrat';
+  font-weight: 500;
+}
+
+.nav-item {
+  text-decoration: none;
 }
 
 #mainNav .navbar-toggler {
@@ -166,7 +183,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #212529;
+    background-color: rgba(38, 56, 116, 0.7);;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -226,9 +243,152 @@ header.masthead .intro-text .intro-heading {
   }
 }
 
-.service-heading {
-  margin: 15px 0;
-  text-transform: none;
+.presentationtitre {
+  margin-top: 40px;
+  color: gray;
+}
+
+.presentation-content {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.presentation {
+  width: 90%;
+}
+
+.pictogrammes {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin: auto;
+  margin-bottom: 50px;
+  border: 1px solid black;
+}
+
+.pictogrammes p {
+  font-family: 'Montserrat';
+  font-weight: bolder;
+  line-height: normal;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.pictogramme-1 {
+  height: 70px;
+  width: 70px;
+  margin-top: 21px;
+  margin-bottom: 10px;
+}
+
+.pictogramme-2 {
+  height: 90px;
+  width: 90px;
+  margin-top: 11px;
+}
+
+.pictogramme-3 {
+  height: 90px;
+  width: 90px;
+  margin-top: 11px;
+}
+
+.pictogramme-4 {
+  height: 90px;
+  width: 90px;
+  margin-top: 11px;
+}
+
+.picto-border1 {
+  width: 150px;
+  height: 150px;
+  border-right: 1px solid black;
+}
+
+.picto-border2 {
+  width: 150px;
+  height: 150px;
+  border-right: 1px solid black;
+}
+
+.picto-border3 {
+  width: 150px;
+  height: 150px;
+  border-right: 1px solid black;
+}
+
+.picto-border4 {
+  width: 150px;
+  height: 150px;
+}
+
+.programme {
+  display: flex;
+  background-image: url(../img/content/IAbrain2.png);
+  background-size: cover;
+  background-attachment: fixed;
+  height: 800px;
+  padding-top: 100px;
+}
+
+.list-prog {
+  display: flex;
+  border-radius: 20px;
+  background-color: rgba(38, 56, 116, 0.9);
+  color: white;
+  padding: 10px;
+  padding-left: 50px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.list-prog h4 {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.line {
+  width: 450px;
+  height: 6px;
+  border-bottom: thin solid white;
+  margin-bottom: 15px;
+}
+
+.calendarwhite {
+
+  padding: 20px;
+  margin: auto;
+  border: 4px solid white;
+}
+
+.speakers-titre {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.speakers-texte {
+  text-align: center;
+  color: grey;
+}
+
+.organisateurs-titre {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.organisateurs-texte {
+  text-align: center;
+  color: grey;
+}
+
+#bouton-inscription {
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 #portfolio .portfolio-item {
@@ -590,7 +750,7 @@ header.masthead .intro-text .intro-heading {
 
 section#contact {
   background-color: #212529;
-  background-image: url("../img/map-image.png");
+  background-image: url("../img/content/map.png");
   background-repeat: no-repeat;
   background-position: center;
 }
