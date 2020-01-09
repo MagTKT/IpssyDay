@@ -50,6 +50,9 @@
             <a class="nav-link js-scroll-trigger" href="#team">Sponsors</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#inscription">Inscription</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
         </ul>
@@ -290,6 +293,115 @@
       </div>
     </div>
   </section> -->
+
+
+  <!-- Inscription -->
+
+
+
+  <section class="page-section" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Inscription</h2>
+          <h3 class="section-subheading text-muted">Pourquoi participer</h3>
+        </div>
+        <p>
+          IPSSI DAY, c'est l'occasion de venir s'inspirer de sujets actuels, d'en apprendre davantage sur l'IA, cette technologie encore abstraite pour beaucoup mais qui se révèle indispensable pour la compétitivité économique de demain. C'est aussi l'opportunité de rencontrer et échanger avec nos intervenants lors de sessions de networking.
+          Cerise sur le gâteau : de nombreux lots à gagner et des goodies à récupérer !
+        </p>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section" id="inscription">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Inscription</h2>
+          <h3 class="section-subheading text-muted" style="margin-bottom:40px">Pourquoi participer</h3>
+        </div>
+        <p>
+          IPSSI DAY, c'est l'occasion de venir s'inspirer de sujets actuels, d'en apprendre davantage sur l'IA, cette technologie encore abstraite pour beaucoup mais qui se révèle indispensable pour la compétitivité économique de demain. C'est aussi l'opportunité de rencontrer et échanger avec nos intervenants lors de sessions de networking.
+          Cerise sur le gâteau : de nombreux lots à gagner et des goodies à récupérer !
+        </p>
+      </div>
+      <p style="margin-bottom:20px"></p>
+      <div class="row">
+        <div class="col-lg-12">
+          <form id="inscriptionForm" name="sentMessage_sign_in" novalidate="novalidate">
+
+
+
+<div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary active">
+    <input type="radio" name="type_sign_in" id="participant" autocomplete="off" checked> Participant
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="type_sign_in" id="intervenant" autocomplete="off"> Intervenant
+  </label>
+  <label class="btn btn-secondary">
+    <input type="radio" name="type_sign_in" id="sponsor" autocomplete="off"> Sponsor
+  </label>
+</div>
+<br><br>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input class="form-control" id="name_sign_in" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="email_sign_in" type="email" placeholder="Your Email *" required="required" data-validation-required-message="Please enter your email address.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="phone_sign_in" type="tel" placeholder="Your Phone *" required="required" data-validation-required-message="Please enter your phone number.">
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group" id="link">
+                  <?php require_once('model/Reseaux.php');
+                  $reseaux=new Reseaux();
+                  $tab_reseaux=$reseaux->getReseau();
+                  ?>
+
+                  <div class="row">
+                    <div class="col-md-4" style="padding-right:0px">
+                      <select class="form-control" id="id_link">
+                        <option></option>
+                        <?php
+                        foreach ($tab_reseaux as $unreseau){
+                        ?>
+                          <option value="<?= $unreseau['res_id_reseau'] ?>"><?= $unreseau['res_libelle_reseau'] ?></option>
+                        <?php
+                        }
+                        ?>
+                      </select>
+                      <p class="help-block "></p>
+                    </div>
+                    <div class="col-md">
+                      <input class="form-control" id="link" type="text" placeholder="Your Link *" >
+                    </div>
+                  </div> 
+
+                </div>
+              </div>
+              <div class="clearfix"></div>
+              <div class="col-lg-12 text-center">
+                <div id="successSignIn"></div>
+                <button id="sendSignInButton" class="btn btn-primary btn-xl text-uppercase" type="submit">Sign in</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- Contact -->
   <section class="page-section" id="contact">
@@ -592,9 +704,10 @@
   <!-- Contact form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
+  <script src="js/sign_in.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="js/agency.min.js"></script>
+  <script src="js/agency.js"></script>
 
 </body>
 

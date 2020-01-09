@@ -2,7 +2,7 @@
 
 require_once('config/config.php');
 
-function connect ()
+function connectBDD ()
 {
     try {
         return new PDO(
