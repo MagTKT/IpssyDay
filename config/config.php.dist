@@ -1,0 +1,8 @@
+<?php
+
+const DATABASE_CONFIG = [
+    'DB_HOSTNAME' => 'mariadb',
+    'DB_NAME' => 'mydb',
+    'LOGIN' => 'root',
+    'PASS' => 'root'
+];
