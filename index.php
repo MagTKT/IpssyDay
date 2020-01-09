@@ -75,41 +75,97 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Presentation</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-6">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
+        <div class="col-md-12">
           <h4 class="service-heading">L'event</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <p class="text-muted">« Intelligence Artificielle et Machine Learning : on en est-on ? »</p>
+          <p class="text-muted">
+            Le 25 juin 2020, IPSSI Paris organise l'IPSSI DAY : une journée complète pour participer à des conférences sur le thème de l'Intelligence Artificielle et du Machine Learning.
+            Depuis quelques années, l'Intelligence Artificielle est le sujet qui ne cesse de faire parler de lui. Obscur, compliqué, innovant, indispensable... sont autant d'adjectifs qui définissent la vision que l'on s'en fait.
+            Lors de cette journée, l'objectif est de vulgariser les techniques d’IA, en comprendre les bénéfices et les risques à les déployer. Il s’agit de se demander comment l'Homme va pouvoir cohabiter avec cette technologie en pleine expansion et quelles sont les limites à ne pas franchir.</p>
         </div>
-        <div class="col-md-6">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
+        <div class="row">
+          <div class="col-md-3 text">
+          <img class="img-fluid d-block mx-auto" src="img/logos/participant.png" alt="">
+            300 participants
+          </div>
+          <div class="col-md-3 text">
+          <img class="img-fluid d-block mx-auto" src="img/logos/speaker.png" alt="">
+            8 speakers
+          </div>
+          <div class="col-md-3 text">
+          <img class="img-fluid d-block mx-auto" src="img/logos/conf.png" alt="">
+            3 salles de conférence
+          </div>
+          <div class="col-md-3 text">
+          <img class="img-fluid d-block mx-auto" src="img/logos/cadeaux.png" alt="">
+            15 lots à gagner
+          </div>
+        </div>
+        <div class="col-md-12">
           <h4 class="service-heading">Programme</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p>
+              9H : Petit déjeuner d'accueil
+              <br>
+              9H30 : Discours d’ouverture
+              <p>
+                10H : Conférences
+                <br>
+                Salle 1 : "[titre du pitch]" - Prénom Nom
+                <br>
+                Salle 2 : "[titre du pitch]" - Prénom Nom
+                <br>
+                Salle 3 : "[titre du pitch]" - Prénom Nom
+              </p>
+              <br>
+              10H30 : Coffee Break
+              <br>
+              <p>
+                <br>
+                10H45 : Conférences
+                <br>
+                Salle 1 : "[titre du pitch]" - Prénom Nom
+                <br>
+                Salle 2 : "[titre du pitch]" - Prénom Nom
+                <br>
+                Salle 3 : "[titre du pitch]" - Prénom Nom
+              </p>
+              <br>
+              13H : Pause déjeuner - Buffet
+              <p>
+                <br>
+                14H : Conférences
+                <br>
+                Salle 1 : "[titre du pitch]" - Prénom Nom
+                <br>
+                Salle 2 : "[titre du pitch]" - Prénom Nom
+                <br>
+                Salle 3 : "[titre du pitch]" - Prénom Nom
+                <br>
+              </p>
+              <p>
+                16H : Tombola - Remise des lots
+                <br>
+                18H : Fin du programme
+              </p>
+            </p>
         </div>
-        <div class="col-md-6">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
+        <div class="col-md-12">
           <h4 class="service-heading">Speakers</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <p class="text-muted">
+            (en attente des speakers)
+            Photo
+            Prénom - Nom
+            Poste
+          </p>
         </div>
-        <div class="col-md-6">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Ipssi</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        <div class="col-md-12">
+          <h4 class="service-heading">Les organisateurs</h4>
+          <p class="text-muted">
+          Issue du groupe IP-Formation, IPSSI a pour expertise les domaines de l’Informatique, du Web et du Digital Marketing depuis plus de 20 ans. Nous avons pour vocation de former des étudiants aux métiers liés aux nouvelles technologies. Quoi de mieux que d'aborder la thématique de la montée en puissance de l'IA pour cette nouvelle décennie, décisive sur notre avenir.
+          </p>
         </div>
       </div>
       <div class="row text-center">
@@ -125,86 +181,21 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Sponsors</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
-      </div>
+    </div>
+  </section>
+  <!-- About -->
+  <section class="page-section" id="about">
+    <div class="container">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>Kay Garland</h4>
-            <p class="text-muted">Lead Designer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading text-uppercase">Inscription</h2>
+          <h3 class="section-subheading text-muted">Pourquoi participer</h3>
         </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Larry Parker</h4>
-            <p class="text-muted">Lead Marketer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-            <h4>Diana Pertersen</h4>
-            <p class="text-muted">Lead Developer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+        <p>
+          IPSSI DAY, c'est l'occasion de venir s'inspirer de sujets actuels, d'en apprendre davantage sur l'IA, cette technologie encore abstraite pour beaucoup mais qui se révèle indispensable pour la compétitivité économique de demain. C'est aussi l'opportunité de rencontrer et échanger avec nos intervenants lors de sessions de networking.
+          Cerise sur le gâteau : de nombreux lots à gagner et des goodies à récupérer !
+        </p>
         </div>
       </div>
     </div>
@@ -266,6 +257,8 @@
 
 
 
+
+
   <!-- Clients -->
   <!-- <section class="py-5">
     <div class="container">
@@ -293,7 +286,6 @@
       </div>
     </div>
   </section> -->
-
 
   <!-- Inscription -->
 
