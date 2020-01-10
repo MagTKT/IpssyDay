@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mer 08 Janvier 2020 à 08:39
+-- Généré le :  Jeu 09 Janvier 2020 à 15:31
 -- Version du serveur :  5.7.11
 -- Version de PHP :  7.0.3
 
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `projet_ipssiday`
+-- Base de données :  `ipssi_day`
 --
 
 -- --------------------------------------------------------
@@ -54,7 +54,7 @@ CREATE TABLE `date` (
 
 CREATE TABLE `date_intervenant` (
   `da-in_Date` date NOT NULL,
-  `da-in_ID_Intervenant` int(11) NOT NULL,
+  `da-in_ID_Intervenant` int(5) NOT NULL,
   `da-in_Heure_debut` time DEFAULT NULL,
   `da-in_Heure_fin` time DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -67,7 +67,7 @@ CREATE TABLE `date_intervenant` (
 
 CREATE TABLE `date_participant` (
   `da-par_Date` date NOT NULL,
-  `da-par_ID_Participant` int(11) NOT NULL
+  `da-par_ID_Participant` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -90,7 +90,7 @@ CREATE TABLE `grade` (
 --
 
 INSERT INTO `grade` (`gra_id_grade`, `gra_nom`, `gra_prix`, `gra_systeme`, `gra_visibilite`, `gra_quantité`) VALUES
-(1, 'Bronze', NULL, 'Cagnotte en ligne ', 'Logo sur le site', 999),
+(1, 'Bronze', NULL, 'Cagnotte en ligne ', 'Logo/ Nom sur le site.', 999),
 (2, 'Silver', 400, 'Donation pour l’événement + Possibilité de produits pour la Tombola.', 'Logo sur le site - Goodies de l’entreprise distribués - Présence sur la bâche Sponsors.', 20),
 (3, 'Gold', 900, 'Donation pour l’événement + Produits pour la Tombola.', 'Logo sur le site - Goodies de l’entreprise distribués - Présence sur la bâche Sponsors - Flyers positionnées sur une table à l’entrée - 1 Publication sur nos réseaux sociaux.', 10),
 (4, 'Platinium', 2000, 'Donation pour l’événement + Produits pour la Tombola.', 'Logo sur le site - Goodies de l’entreprise distribués - Présence sur la bâche Sponsors - Flyers positionnées sur une table à l’entrée - 2 Publications sur nos réseaux sociaux - Présence dans une salle des plus gros donateurs avec un espace dédiés s\'ils le souhaitent.', 8),
@@ -103,10 +103,11 @@ INSERT INTO `grade` (`gra_id_grade`, `gra_nom`, `gra_prix`, `gra_systeme`, `gra_
 --
 
 CREATE TABLE `intervenant` (
-  `in_id_intervenant` int(11) NOT NULL,
+  `in_id_intervenant` int(5) NOT NULL,
   `in_mail_intervenant` varchar(50) NOT NULL,
   `in_telephone_intervenant` int(10) NOT NULL,
-  `in_nom_intervenant` varchar(50) NOT NULL
+  `in_nom_intervenant` varchar(50) NOT NULL,
+  `in_prenom_intervenant` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -116,7 +117,7 @@ CREATE TABLE `intervenant` (
 --
 
 CREATE TABLE `participant` (
-  `par_ID_Participant` int(11) NOT NULL,
+  `par_ID_Participant` int(5) NOT NULL,
   `par_Nom` text NOT NULL,
   `par_Prenom` text NOT NULL,
   `par_Mail` varchar(255) DEFAULT NULL,
@@ -132,8 +133,20 @@ CREATE TABLE `participant` (
 
 CREATE TABLE `reseaux` (
   `res_id_reseau` int(5) NOT NULL,
-  `res_libelle_reseau` varchar(255) NOT NULL
+  `res_libelle_reseau` varchar(255) NOT NULL,
+  `res_logo_reseau` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `reseaux`
+--
+
+INSERT INTO `reseaux` (`res_id_reseau`, `res_libelle_reseau`, `res_logo_reseau`) VALUES
+(1, 'Twitter', 'img/logos/twitter.webp'),
+(2, 'Youtube', 'img/logos/youtube.webp'),
+(3, 'Facebook', ''),
+(4, 'Linkedin', ''),
+(5, 'Instagram', '');
 
 -- --------------------------------------------------------
 
@@ -142,9 +155,21 @@ CREATE TABLE `reseaux` (
 --
 
 CREATE TABLE `reseau_intervenant` (
-  `res-in_ID_Reseau` int(11) NOT NULL,
-  `res-in_ID_Intervenant` int(11) NOT NULL,
+  `res-in_ID_Reseau` int(5) NOT NULL,
+  `res-in_ID_Intervenant` int(5) NOT NULL,
   `res-in_Lien` varchar(1024) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `reseau_sponsor`
+--
+
+CREATE TABLE `reseau_sponsor` (
+  `res-spo_id_sponsor` int(5) NOT NULL,
+  `res-spo_id_reseau` int(5) NOT NULL,
+  `res-in_Sponsor` varchar(1024) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -155,14 +180,14 @@ CREATE TABLE `reseau_intervenant` (
 
 CREATE TABLE `sponsor` (
   `spo_id_sponsor` int(5) NOT NULL,
-  `spo_nom_Sponsor` varchar(255) NOT NULL,
+  `spo_nom_Sponsor` varchar(255) DEFAULT NULL,
   `spo_adresse_entreprise` varchar(255) DEFAULT NULL,
   `spo_Code_postal_entreprise` int(5) DEFAULT NULL,
   `spo_logo` varchar(255) DEFAULT NULL,
   `spo_description` varchar(255) DEFAULT NULL,
-  `spo_telephone` int(10) NOT NULL,
-  `spo_mail_Sponsor` varchar(255) NOT NULL,
-  `spo_id_grade` int(5) NOT NULL
+  `spo_telephone` int(10) DEFAULT NULL,
+  `spo_mail_Sponsor` varchar(255) DEFAULT NULL,
+  `spo_id_grade` int(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -232,6 +257,14 @@ ALTER TABLE `reseau_intervenant`
   ADD KEY `ID_Intervenant` (`res-in_ID_Intervenant`);
 
 --
+-- Index pour la table `reseau_sponsor`
+--
+ALTER TABLE `reseau_sponsor`
+  ADD PRIMARY KEY (`res-spo_id_sponsor`,`res-spo_id_reseau`),
+  ADD KEY `id_sponsor` (`res-spo_id_sponsor`),
+  ADD KEY `id_reseau` (`res-spo_id_reseau`);
+
+--
 -- Index pour la table `sponsor`
 --
 ALTER TABLE `sponsor`
@@ -256,22 +289,22 @@ ALTER TABLE `grade`
 -- AUTO_INCREMENT pour la table `intervenant`
 --
 ALTER TABLE `intervenant`
-  MODIFY `in_id_intervenant` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `in_id_intervenant` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `participant`
 --
 ALTER TABLE `participant`
-  MODIFY `par_ID_Participant` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `par_ID_Participant` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `reseaux`
 --
 ALTER TABLE `reseaux`
-  MODIFY `res_id_reseau` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `res_id_reseau` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT pour la table `sponsor`
 --
 ALTER TABLE `sponsor`
-  MODIFY `spo_id_sponsor` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `spo_id_sponsor` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Contraintes pour les tables exportées
 --
@@ -302,6 +335,13 @@ ALTER TABLE `intervenant`
 ALTER TABLE `reseau_intervenant`
   ADD CONSTRAINT `reseau_intervenant_ibfk_1` FOREIGN KEY (`res-in_ID_Reseau`) REFERENCES `reseaux` (`res_id_reseau`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `reseau_intervenant_ibfk_2` FOREIGN KEY (`res-in_ID_Intervenant`) REFERENCES `intervenant` (`in_id_intervenant`);
+
+--
+-- Contraintes pour la table `reseau_sponsor`
+--
+ALTER TABLE `reseau_sponsor`
+  ADD CONSTRAINT `reseau_sponsor_ibfk_1` FOREIGN KEY (`res-spo_id_sponsor`) REFERENCES `sponsor` (`spo_id_sponsor`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `reseau_sponsor_ibfk_2` FOREIGN KEY (`res-spo_id_reseau`) REFERENCES `reseaux` (`res_id_reseau`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `sponsor`

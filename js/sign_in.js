@@ -1,6 +1,6 @@
 $(function() {
-
-  $("#inscriptionForm input,#inscriptionForm select").jqBootstrapValidation({
+//
+  $("#inscriptionForm input, #inscriptionForm select").jqBootstrapValidation({
     preventSubmit: true,
     submitError: function($form, event, errors) {
       // additional error messages or events
@@ -12,6 +12,8 @@ $(function() {
       var email = $("input#email_sign_in").val();
       var phone = $("input#phone_sign_in").val();
       var id_link = $("select#id_link").val();
+
+      var prenom=$("input#firstname_sign_in").val();
 
       var link = $("input#link").val();
       var firstName = name; // For Success/Failure Message
@@ -26,6 +28,7 @@ $(function() {
         type: "POST",
         data: {
           name: name,
+          prenom:prenom,
           phone: phone,
           email: email,
           id_link: id_link,
