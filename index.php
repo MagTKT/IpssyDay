@@ -190,24 +190,29 @@
 
 
 
-            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+            <div class="btn-group btn-group-toggle" id="type_sign" data-toggle="buttons">
               <label class="btn btn-secondary active">
                 <input type="radio" name="type_sign_in" id="participant" autocomplete="off" checked> Participant
               </label>
+ <!--
               <label class="btn btn-secondary">
                 <input type="radio" name="type_sign_in" id="intervenant" autocomplete="off"> Intervenant
               </label>
               <label class="btn btn-secondary">
                 <input type="radio" name="type_sign_in" id="sponsor" autocomplete="off"> Sponsor
               </label>
+-->
             </div>
             <br><br>
-
             
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <input class="form-control" id="name_sign_in" type="text" placeholder="Your Name *" required="required" data-validation-required-message="Please enter your name.">
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" id="firstname_sign_in" type="text" placeholder="Your firstname *" required="required" data-validation-required-message="Please enter your name.">
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
@@ -219,9 +224,10 @@
                   <p class="help-block text-danger"></p>
                 </div>
               </div>
+              <!--
               <div class="col-md-6">
                 <div class="form-group" id="link">
-                  <?php require_once('model/Reseaux.php');
+                  <php require_once('model/Reseaux.php');
                   $reseaux=new Reseaux();
                   $tab_reseaux=$reseaux->getReseau();
                   ?>
@@ -230,11 +236,11 @@
                     <div class="col-md-4" style="padding-right:0px">
                       <select class="form-control" id="id_link">
                         <option></option>
-                        <?php
+                        <php
                         foreach ($tab_reseaux as $unreseau){
                         ?>
-                          <option value="<?= $unreseau['res_id_reseau'] ?>"><?= $unreseau['res_libelle_reseau'] ?></option>
-                        <?php
+                          <option value="<= $unreseau['res_id_reseau'] ?>"><= $unreseau['res_libelle_reseau'] ?></option>
+                        <php
                         }
                         ?>
                       </select>
@@ -244,9 +250,10 @@
                       <input class="form-control" id="link" type="text" placeholder="Your Link *" >
                     </div>
                   </div> 
-
+                      
                 </div>
               </div>
+            -->
               <div class="clearfix"></div>
               <div class="col-lg-12 text-center">
                 <div id="successSignIn"></div>
