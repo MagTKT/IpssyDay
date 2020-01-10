@@ -42,4 +42,5 @@ class Sponsor
 	function getIdSponsor(){
 		return $this->$spo_id_sponsor;
 	}
+
 }

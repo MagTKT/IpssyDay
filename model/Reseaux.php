@@ -29,6 +29,4 @@ class Reseaux
         return true;
 	}
 
-
-
 }

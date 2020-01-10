@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
   <title>Campus Paris</title>
 
@@ -30,7 +32,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top">Campus Paris</a>
+      <a class="scroll" href="#page-top">Campus Paris</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -38,22 +40,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav text-uppercase ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Presentation</a>
+            <a class="scroll" href="#services">Presentation</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#portfolio">IPSSI</a>
+            <a class="scroll" href="#portfolio">SPONSORS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">Pourquoi s'inscrire</a>
+            <a class="scroll" href="#inscription">INSCRIPTION</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#team">Sponsors</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#inscription">Inscription</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+            <a class="scroll" id="scroll" href="#contact">Contact</a>
           </li>
         </ul>
       </div>
@@ -65,6 +61,10 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-heading text-uppercase">Ipssi Day</div>
+</head>
+<body>
+
+<p id="timer"></p>
       </div>
     </div>
   </header>
@@ -75,46 +75,85 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Presentation</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-6">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
-          </span>
+        <div class="col-md-12">
           <h4 class="service-heading">L'event</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+          <p class="presentationtitre">« Intelligence Artificielle et Machine Learning : où en est-on ? »</p>
+          </div>
+          <div class="presentation-content">
+            <p class="presentation">
+            Le 25 juin 2020, IPSSI Paris organise l'IPSSI DAY : une journée complète pour participer à des conférences sur le thème de l'Intelligence Artificielle et du Machine Learning.
+            Depuis quelques années, l'Intelligence Artificielle est le sujet qui ne cesse de faire parler de lui. Obscur, compliqué, innovant, indispensable... sont autant d'adjectifs qui définissent la vision que l'on s'en fait.
+            Lors de cette journée, l'objectif est de vulgariser les techniques d’IA, en comprendre les bénéfices et les risques à les déployer. Il s’agit de se demander comment l'Homme va pouvoir cohabiter avec cette technologie en pleine expansion et quelles sont les limites à ne pas franchir.
+            </p>
+          </div>
+
+        <div class="pictogrammes">
+          <div class="picto-border1">
+          <img class="pictogramme-1" src="img/logos/participant2.png" alt="">
+            <p>300 participants</p>
+          </div>
+          <div class="picto-border2">
+          <img class="pictogramme-2" src="img/logos/speaker2.png" alt="">
+            <p>8 speakers</p>
+          </div>
+          <div class="picto-border3">
+          <img class="pictogramme-3"src="img/logos/conf2.png" alt="">
+            <p>3 salles de conférence</p>
+          </div>
+          <div class="picto-border4">
+          <img class="pictogramme-4" src="img/logos/cadeaux2.png" alt="">
+            <p>15 lots à gagner</p>
+          </div>
         </div>
-        <div class="col-md-6">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-          </span>
+        </div>
+        </div>
+
+      <div class="programme">
+      <div class="container">
+          <div class="list-prog">
+          <div>
           <h4 class="service-heading">Programme</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p>9:00 |   Petit déjeuner d'accueil</p>
+            <div class="line"></div>
+            <p>10:00 |  Conférences</p>
+            <div class="line"></div>
+            <p>13:00 |  Pause déjeuner - Buffet</p>
+            <div class="line"></div>
+            <p>14:00 |  Conférences</p>
+            <div class="line"></div>
+            <p>16:00 |  Tombola - Remise des lots</p>
+            <div class="line"></div>
+            <p>18:00 |  Fin du programme</p>
+            </div>
+            <div class="calendarwhite">
+            <img src="img/logos/calendarwhite.png">
+            </div>
+          </div>
         </div>
-        <div class="col-md-6">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Speakers</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+      </div>
+        <div class="container">
+        <div class="col-md-12">
+          <h4 class="speakers-titre">Speakers</h4>
+          <p class="speakers-texte">
+            (en attente des speakers)
+            Photo
+            Prénom - Nom
+            Poste
+          </p>
         </div>
-        <div class="col-md-6">
-          <span class="fa-stack fa-4x">
-            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
-          </span>
-          <h4 class="service-heading">Ipssi</h4>
-          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        <div class="col-md-12">
+          <h4 class="organisateurs-titre">Les organisateurs</h4>
+          <p class="organisateurs-texte">
+          Issue du groupe IP-Formation, IPSSI a pour expertise les domaines de l’Informatique, du Web et du Digital Marketing depuis plus de 20 ans. Nous avons pour vocation de former des étudiants aux métiers liés aux nouvelles technologies. Quoi de mieux que d'aborder la thématique de la montée en puissance de l'IA pour cette nouvelle décennie, décisive sur notre avenir.
+          </p>
         </div>
       </div>
       <div class="row text-center">
         <div class='col-md-12'>
-          <button class="btn btn-primary" data-dismiss="modal" type="button">Inscription</button>
+          <button class="btn btn-primary" id="bouton-inscription" data-dismiss="modal" type="button" href="#inscription" >Inscription</button>
         </div>
       </div>
     </div>
@@ -125,175 +164,10 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading text-uppercase">Sponsors</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/1.jpg" alt="">
-            <h4>Kay Garland</h4>
-            <p class="text-muted">Lead Designer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/2.jpg" alt="">
-            <h4>Larry Parker</h4>
-            <p class="text-muted">Lead Marketer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="team-member">
-            <img class="mx-auto rounded-circle" src="img/team/3.jpg" alt="">
-            <h4>Diana Pertersen</h4>
-            <p class="text-muted">Lead Developer</p>
-            <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-8 mx-auto text-center">
-          <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-        </div>
-      </div>
     </div>
   </section>
  
-
-  <!-- About -->
-  <section class="page-section" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2 class="section-heading text-uppercase">Inscription</h2>
-          <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12">
-          <ul class="timeline">
-            <li>
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/1.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>Pourquoi s'inscrire</h4>
-                  <h4 class="subheading">Our Humble Beginnings</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="">
-              </div>
-              <div class="timeline-panel">
-                <div class="timeline-heading">
-                  <h4>Inscription</h4>
-                  <h4 class="subheading">An Agency is Born</h4>
-                </div>
-                <div class="timeline-body">
-                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
-                </div>
-              </div>
-            </li>
-            <li class="timeline-inverted">
-              <div class="timeline-image">
-                <h4>Be Part
-                  <br>Of Our
-                  <br>Story!</h4>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- Clients -->
-  <!-- <section class="py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
 
   <!-- Inscription -->
 
@@ -392,6 +266,35 @@
     </div>
   </section>
 
+
+
+  <!-- Clients -->
+  <!-- <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="img/logos/envato.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="img/logos/designmodo.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="img/logos/themeforest.jpg" alt="">
+          </a>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <a href="#">
+            <img class="img-fluid d-block mx-auto" src="img/logos/creative-market.jpg" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section> -->
 
   <!-- Contact -->
   <section class="page-section" id="contact">
@@ -694,7 +597,6 @@
   <!-- Contact form JavaScript -->
   <script src="js/jqBootstrapValidation.js"></script>
   <script src="js/contact_me.js"></script>
-  <script src="js/sign_in.js"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/agency.js"></script>

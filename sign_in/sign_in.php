@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 // Check for empty fields
 if(empty($_POST['name'])      ||
@@ -56,3 +57,4 @@ if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "em
 
 */   
 ?>
+
