@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
   <title>Campus Paris</title>
 
@@ -59,6 +61,10 @@
     <div class="container">
       <div class="intro-text">
         <div class="intro-heading text-uppercase">Ipssi Day</div>
+</head>
+<body>
+
+<p id="timer"></p>
       </div>
     </div>
   </header>
